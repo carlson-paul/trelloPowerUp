@@ -1,3 +1,4 @@
+import {google} from 'googleapis';
 console.log("goodbest google sheet integrator");
 
 let BLACK_ROCKET_ICON =
