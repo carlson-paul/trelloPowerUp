@@ -11,19 +11,25 @@ window.TrelloPowerUp.initialize(
           icon: BLACK_ROCKET_ICON,
           text: "Goodbeast GSheet integration",
           callback: function (t) {
-            const cardList = [];
-            const listDict = {};
-            const memberDict = {};
-            const labelDict = {};
-            const priorityDict = {};
-            const cardPriorityList = [];
+						const auth = new google.auth.GoogleAuth({
+														keyFile: 'keys.json',
+														scopes: 'https://www.googleapis.com/auth/spreadsheets'
+													});
+													const cardList = [];
+													const listDict = {};
+													const memberDict = {};
+													const labelDict = {};
+													const priorityDict = {};
+													const cardPriorityList = [];
+
+													let context = t.getContext();
+								let boardId = context['board'];
+													const authClientObject = auth.getClient();
+													const googleSheetInstance = google.sheets({version: 'v4',auth: authClientObject});
+													const spreadsheetId = '1onix_nrV409KUSIwi_cFMs445_7NEHi9cbwAQlF8WIk';
 
             (async function () {
-							let context = t.getContext();
-		let boardId = context['board'];
-              const authClientObject = auth.getClient();
-              const googleSheetInstance = google.sheets({version: 'v4',auth: authClientObject});
-              const spreadsheetId = '1onix_nrV409KUSIwi_cFMs445_7NEHi9cbwAQlF8WIk';
+							
 
               const cardResponse = await fetch(
                 `https://api.trello.com/1/boards/${boardId}/cards?customFieldItems=true&key=8567e52ef0a5c3a9a4a76eb2722ea6d0&token=491a487812cc3fb1d1f188f9e693340640d287f36ef0bac4880c1fb707edbedc`
