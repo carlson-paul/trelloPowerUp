@@ -3,10 +3,12 @@ console.log('goodbest google sheet integrator');
 let BLACK_ROCKET_ICON = 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421';
 window.TrelloPowerUp.initialize({
 	'board-buttons': function(t){
-
 		return[{
 			icon: BLACK_ROCKET_ICON,
-			text: 'Goodbeast GSheet integration'
+			text: 'Goodbeast GSheet integration',
+			callback: function(t) {
+				console.log('inside calls back');
+			}
 		}];
 	}
 })
