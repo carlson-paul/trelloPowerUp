@@ -23,6 +23,8 @@
     "node-fetch": "^2.6.7"
   },
   "alias":{
-    "process":"false"
+    "process":{
+      "global":"{}"
+    }
   }
 }
