@@ -9,7 +9,10 @@ window.TrelloPowerUp.initialize({
 			icon: BLACK_ROCKET_ICON,
 			text: 'Goodbeast GSheet integration',
 			callback: function(t) {
-				console.log('inside calls back');
+				console.log(t.getRestApi().isAuthorized());
+				let context = t.getContext();
+				let boardId = context['board'];
+				console.log(boardId);
 			},
 
 		}];
