@@ -1,4 +1,5 @@
-import fetch from 'node-fetch';
+const {google} = require('googleapis');
+const fetch = require('node-fetch');
 
 console.log('hello world');
 var BLACK_ROCKET_ICON = 'https://cdn.glitch.com/1b42d7fe-bda8-4af8-a6c8-eff0cea9e08a%2Frocket-ship.png?1494946700421';
