@@ -9,8 +9,5 @@ window.TrelloPowerUp.initialize({
 			icon: BLACK_ROCKET_ICON,
 			text: 'Goodbeast GSheet integration'
 		}];
-	}, {
-		appKey: '8567e52ef0a5c3a9a4a76eb2722ea6d0',
-		appName: 'Goodbeast Googlesheet Powerup'
-	}
+	}, 
 })
