@@ -18,22 +18,9 @@
   },
   "homepage": "https://github.com/carlsopa/trelloPowerUp#readme",
   "dependencies": {
-    "parcel": "^2.7.0",
     "google-spreadsheet": "^3.3.0",
-    "googleapis": "^108.0.1",
-    "node-fetch": "^2.6.7",
-    "stream-browserify": "3.0.0",
-    "os-browserify":"0.3.0"
-
-
-  },
-  "alias":{
-    "process":{
-      "global":"{}",
-      "os":"{}",
-      "stream":"{}",
-      "util":"{}",
-      "buffer":"{}"
-    }
+    "google-spreadsheets": "^2.0.0",
+    "googleapis": "^109.0.1",
+    "parcel": "^2.8.0"
   }
 }
