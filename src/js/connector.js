@@ -13,8 +13,7 @@ window.TrelloPowerUp.initialize(
           icon: BLACK_ROCKET_ICON,
           text: "Goodbeast GSheet integration",
           callback: function (t) {
-						const CLIENT_ID = '115916993480137684136',
-						API_KEY = 'AIzaSyCAq-MLQPmsBt_bFDnFIQTIrH87Wphr1iw',
+						const 
 						DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4',
 						SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
 						
