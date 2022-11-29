@@ -1,4 +1,5 @@
 import {google} from 'googleapis';
+gapi.load('client',init);
 console.log("goodbest google sheet integrator");
 
 let BLACK_ROCKET_ICON =
