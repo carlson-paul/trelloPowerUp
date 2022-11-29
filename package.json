@@ -33,6 +33,12 @@
     },
     "url":{
       "global":"{}"
+    },
+    "util":{
+      "global":"{}"
+    },
+    "events":{
+      "global":"{}"
     }
   }
 }
