@@ -21,6 +21,7 @@
     "google-spreadsheet": "^3.3.0",
     "google-spreadsheets": "^2.0.0",
     "googleapis": "^109.0.1",
-    "parcel": "^2.8.0"
+    "parcel": "^2.8.0",
+    "stream-browserify":"3.0.0"
   }
 }
