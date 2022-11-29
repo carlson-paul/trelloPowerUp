@@ -1,4 +1,4 @@
-// import {google} from 'googleapis';
+import {google} from 'googleapis';
 console.log("goodbest google sheet integrator");
 
 let BLACK_ROCKET_ICON =
@@ -12,10 +12,10 @@ window.TrelloPowerUp.initialize(
           icon: BLACK_ROCKET_ICON,
           text: "Goodbeast GSheet integration",
           callback: function (t) {
-						// const auth = new google.auth.GoogleAuth({
-						// 								keyFile: 'keys.json',
-						// 								scopes: 'https://www.googleapis.com/auth/spreadsheets'
-						// 							});
+						const auth = new google.auth.GoogleAuth({
+														keyFile: 'keys.json',
+														scopes: 'https://www.googleapis.com/auth/spreadsheets'
+													});
 													const cardList = [];
 													const listDict = {};
 													const memberDict = {};
