@@ -13,10 +13,10 @@ window.TrelloPowerUp.initialize(
           text: "Goodbeast GSheet integration",
           callback: function (t) {
 						const keys = {}
-						const auth = new google.auth.GoogleAuth({
-														keyFile: 'keys.json',
-														scopes: 'https://www.googleapis.com/auth/spreadsheets'
-													});
+						// const auth = new google.auth.GoogleAuth({
+						// 								keyFile: 'keys.json',
+						// 								scopes: 'https://www.googleapis.com/auth/spreadsheets'
+						// 							});
 													const cardList = [];
 													const listDict = {};
 													const memberDict = {};
