@@ -17,6 +17,10 @@ window.TrelloPowerUp.initialize(
 						API_KEY = 'AIzaSyCAq-MLQPmsBt_bFDnFIQTIrH87Wphr1iw',
 						DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4',
 						SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+						
+						let tokenClient,
+						gapiInited = false,
+      			gisInited = false;
 
 						function gapiLoaded() {
 							gapi.load('client', intializeGapiClient);
@@ -40,6 +44,12 @@ window.TrelloPowerUp.initialize(
 							gisInited = true;
 							maybeEnableButtons();
 						};
+						function maybeEnableButtons() {
+							if (gapiInited && gisInited) {
+								console.log('finally something good happens for me!')
+							}
+						};
+
 
 
 						// const auth = new google.auth.GoogleAuth({
