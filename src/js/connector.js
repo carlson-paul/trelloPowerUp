@@ -13,7 +13,35 @@ window.TrelloPowerUp.initialize(
           icon: BLACK_ROCKET_ICON,
           text: "Goodbeast GSheet integration",
           callback: function (t) {
-						const keys = {}
+						const CLIENT_ID = '115916993480137684136',
+						API_KEY = 'AIzaSyCAq-MLQPmsBt_bFDnFIQTIrH87Wphr1iw',
+						DISCOVERY_DOC = 'https://sheets.googleapis.com/$discovery/rest?version=v4',
+						SCOPES = 'https://www.googleapis.com/auth/spreadsheets.readonly';
+
+						function gapiLoaded() {
+							gapi.load('client', intializeGapiClient);
+						};
+
+						async function intializeGapiClient() {
+							await gapi.client.init({
+								apiKey: API_KEY,
+								discoveryDocs: [DISCOVERY_DOC],
+							});
+							gapiInited = true;
+							maybeEnableButtons();
+						};
+
+						function gisLoaded() {
+							tokenClient = google.accounts.oauth2.initTokenClient({
+								client_id: CLIENT_ID,
+								scope: SCOPES,
+								callback: '', // defined later
+							});
+							gisInited = true;
+							maybeEnableButtons();
+						};
+
+
 						// const auth = new google.auth.GoogleAuth({
 						// 								keyFile: 'keys.json',
 						// 								scopes: 'https://www.googleapis.com/auth/spreadsheets'
