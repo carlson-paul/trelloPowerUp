@@ -22,7 +22,8 @@
     "google-spreadsheet": "^3.3.0",
     "googleapis": "^108.0.1",
     "node-fetch": "^2.6.7",
-    "stream-browserify": "3.0.0"
+    "stream-browserify": "3.0.0",
+    "os-browserify":"0.3.0"
 
 
   },
